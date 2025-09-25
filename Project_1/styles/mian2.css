@@ -11,6 +11,7 @@ body {
   min-height: 10vh;
 }
 .container {
+  /* max-width: 1200px; */
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -73,7 +74,7 @@ header p {
   opacity: 0.9;
 }
 
-/* Navigation Styles */
+/* Navigation Styles - Two-tier horizontal menu */
 nav {
   background: linear-gradient(45deg, #34495e, #2c3e50);
   padding: 0;
@@ -84,14 +85,12 @@ nav {
   justify-content: center;
   list-style: none;
   position: relative;
-  flex-wrap: wrap;
 }
 
 .navbar-main > li {
   position: relative;
 }
 
-/* Main links */
 .navbar-main > li > a {
   display: block;
   color: white;
@@ -101,24 +100,22 @@ nav {
   border-bottom: 3px solid transparent;
 }
 
+.navbar-main li:has(.nav-sub) {
+  position: relative;
+   & small { 
+        margin-left: .25em;   /* add space for arrow */
+    } 
+  &:hover > .nav-sub{
+    display: block;
+  }
+}
+
 .navbar-main > li > a:hover {
   background: rgba(255, 255, 255, 0.1);
   border-bottom-color: #3498db;
   transform: translateY(-2px);
 }
 
-/* Submenu */
-.nav-sub {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: linear-gradient(45deg, #34495e, #2c3e50);
-  min-width: 180px;
-  border-radius: 0 0 5px 5px;
-  z-index: 1000;
-  flex-direction: column;
-}
 
 .nav-sub li a {
   display: block;
@@ -135,35 +132,6 @@ nav {
   border-left-color: #3498db;
   padding-left: 2rem;
 }
-
-/* ===== Submenu open/close toggle with checkbox ===== */
-.submenu-toggle {
-  display: none;
-}
-
-.submenu-label {
-  display: block;
-  color: white;
-  cursor: pointer;
-  padding: 1rem 1.5rem;
-  user-select: none;
-}
-
-.submenu-label::after {
-  content: " ▼";
-  font-size: 0.8em;
-}
-
-.submenu-toggle:checked + .submenu-label::after {
-  content: " ▲"; /* flip arrow */
-}
-
-/* Show submenu on hover */
-.navbar-main > li:hover > .nav-sub {
-  display: flex;
-  flex-direction: column;
-}
-
 
 /* Main Content - 2 Column Layout */
 .main-content {
@@ -354,9 +322,9 @@ footer {
 .menu-btn {
     display: none;
     font-size: 24px;
-    color: white;
-    cursor: pointer;
-    padding: 1rem;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
 }
 .menu-btn::after {
     content: "\2630";    /* hamburger icon */
@@ -388,54 +356,32 @@ footer {
   }
 
   .navbar-main {
-    display: none; 
+    display: none; /* hide menu by default */
     flex-direction: column;
     background: linear-gradient(45deg, #34495e, #2c3e50);
-    width: 40%;
+    width: 100%;
   }
- 
-  nav{
-    /* display: contents; */
-    display: flex;
-    position: relative;
-  }
-  .nav-sub{
-    top:auto;
-    left: 0;
-    width: 40%
-  }
-  
-  .navbar-main > li > a,.submenu-label{
-    width: 30px;
 
-  }
-/*
-  .nav-sub {
-    position: absolute;
-    top: 0;        // align with parent 
-    left: 100%;     // push to the right 
-    min-width: 200px;
-    border-radius: 0 5px 5px 0;
-  } */
-
-  
+  /* Show menu when checked */
   #checkbox-toggle:checked ~ .navbar-main {
     display: flex;
   }
 
-  /*
-  .navbar-main > li > a,
-  .submenu-label {
+  .navbar-main > li > a {
     padding: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }  
-  */
+  } 
 
-  .profile-img,
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
   .profile-img2 {
     width: 150px;
     height: 150px;
   }
+
 }
 
 @media only screen and (min-width: 768px)  {
@@ -466,3 +412,4 @@ footer {
   object-fit: cover;
   border-radius: 50%; /* makes them circular */
 }
+
