@@ -1,225 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CIS 525 - Web Technology Course</title>
-    <link rel="stylesheet" type="text/css" href="styles/course.css">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="styles/course.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>CIS 525 - Web Development</h1>
-            <p>Advanced Web Technologies & User Experience Design</p>
-        </header>
+      <header>
+        <h1>CIS 525 - Web Technology</h1>
+      </header>
 
-        <nav>
-            <ul class="navbar-main">
-                <li>
-                    <a href="#overview">Course Overview</a>
-                </li>
-                <li>
-                    <a href="#topics">Topics</a>
-                    <ul class="nav-sub">
-                        <li><a href="#html-css">HTML & CSS</a></li>
-                        <li><a href="#javascript">JavaScript</a></li>
-                        <li><a href="#frameworks">Frameworks</a></li>
-                        <li><a href="#responsive">Responsive Design</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#assignments">Assignments</a>
-                    <ul class="nav-sub">
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#homework">Homework</a></li>
-                        <li><a href="#exams">Exams</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#resources">Resources</a>
-                    <ul class="nav-sub">
-                        <li><a href="#textbooks">Textbooks</a></li>
-                        <li><a href="#online">Online Resources</a></li>
-                        <li><a href="#tools">Development Tools</a></li>
-                    </ul>
-                </li>
+      <nav class="navbar">
+        <input type="checkbox" id="checkbox-toggle" />
+        <label for="checkbox-toggle" class="menu-btn"></label>
+        <ul class="menu">
+          <li>
+            <a href="#overview">Course Overview</a>
+          </li>
+          <li>
+            <a href="#topics">Topics<small class="arrow"></small></a>
+            <ul class="submenu">
+              <li><a href="#html-css">HTML & CSS</a></li>
+              <li><a href="#javascript">JavaScript</a></li>
+              <li><a href="#frameworks">Frameworks</a></li>
+              <li><a href="#responsive">Responsive Design</a></li>
             </ul>
-        </nav>
+          </li>
+          <li>
+            <a href="#assignments">Assignments<small class="arrow"></small></a>
+            <ul class="submenu">
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#homework">Homework</a></li>
+              <li><a href="#exams">Exams</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#resources">Resources<small class="arrow"></small></a>
+            <ul class="submenu">
+              <li><a href="#textbooks">Textbooks</a></li>
+              <li><a href="#online">Online Resources</a></li>
+              <li><a href="#tools">Development Tools</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
 
-        <div class="main-content">
-            <main class="content-area">
-                <section id="overview">
-                    <h2>Course Overview</h2>
-                    <div class="course-card">
-                        <h4>Course Description</h4>
-                        <p>CIS 525 Web Development is an advanced course covering modern web technologies, responsive design principles, and user experience optimization. Students will learn to create dynamic, interactive web applications using industry-standard tools and frameworks.</p>
-                    </div>
-                    
-                    <div class="course-card">
-                        <h4>Learning Objectives</h4>
-                        <p>By the end of this course, students will be able to design and develop professional-quality websites, implement responsive layouts, work with JavaScript frameworks, and understand web accessibility and performance optimization techniques.</p>
-                    </div>
-                    
-                    <div class="course-card">
-                        <h4>Prerequisites</h4>
-                        <p>CIS 350 (Software Engineering), CIS 200 (Programming Fundamentals), and basic understanding of HTML and CSS.</p>
-                    </div>
-                </section>
+      <div class="main-content">
+        <main class="content-area">
+          <section id="overview">
+            <h2>Course Overview</h2>
+            <div class="course-card">
+              <h4>Course Description</h4>
+              <p>
+                The study of technologies used to design and implement web-based
+                applications. Topics include HTML5, CSS, JavaScript, PHP, Rich
+                Internet Application technologies (AJAX), web servers, back-end
+                database connectivity (MySQL), web security, multimedia, XML,
+                JSON, and web services.
+              </p>
+            </div>
 
-                <section id="topics">
-                    <h2>Course Topics</h2>
-                    <ul class="topics-list">
-                        <li>
-                            <strong>Week 1-2: HTML5 & Semantic Markup</strong>
-                            Advanced HTML5 elements, semantic structure, forms, and accessibility features
-                        </li>
-                        <li>
-                            <strong>Week 3-4: Advanced CSS & Layout Systems</strong>
-                            CSS Grid, Flexbox, animations, transitions, and modern layout techniques
-                        </li>
-                        <li>
-                            <strong>Week 5-6: JavaScript Fundamentals</strong>
-                            ES6+ features, DOM manipulation, event handling, and asynchronous programming
-                        </li>
-                        <li>
-                            <strong>Week 7-8: Responsive Web Design</strong>
-                            Mobile-first design, media queries, progressive enhancement, and cross-browser compatibility
-                        </li>
-                        <li>
-                            <strong>Week 9-10: Frontend Frameworks</strong>
-                            Introduction to React, Vue.js, and component-based architecture
-                        </li>
-                        <li>
-                            <strong>Week 11-12: Backend Integration</strong>
-                            RESTful APIs, AJAX, fetch API, and database connectivity
-                        </li>
-                        <li>
-                            <strong>Week 13-14: Performance & Optimization</strong>
-                            Web performance optimization, caching strategies, and build tools
-                        </li>
-                        <li>
-                            <strong>Week 15-16: Final Project & Deployment</strong>
-                            Complete web application development and deployment to production servers
-                        </li>
-                    </ul>
-                </section>
+            <div class="course-card">
+              <h4>Learning Objectives</h4>
+              <ul>
+                <li>An ability to assess the quality of web applications</li>
+                <li>
+                  An ability to create and execute test cases for web
+                  applications
+                </li>
+                <li>
+                  An ability to create UML diagrams as part of the analysis
+                  model for a web application
+                </li>
+                <li>
+                  An ability to analyze a computerized solution to a real-world
+                  problem
+                </li>
+                <li>
+                  An ability to design a computerized solution to a real-world
+                  problem
+                </li>
+                <li>
+                  An ability to use software tools and specialized web
+                  development environments to implement the solution to a
+                  real-world problem
+                </li>
+              </ul>
+            </div>
 
-                <section id="assignments">
-                    <h2>Assignments & Projects</h2>
-                    
-                    <div class="assignment">
-                        <h4>Project 1: Personal Portfolio Website</h4>
-                        <p>Create a responsive personal portfolio website showcasing your skills and projects. Must include semantic HTML5, advanced CSS layouts, and interactive JavaScript features.</p>
-                        <span class="due-date">Due: October 15, 2024</span>
-                    </div>
+            <div class="course-card">
+              <h4>Prerequisites</h4>
+              <p>
+                Previous or concurrßent enrollment in CIS 375 or CIS553 or
+                equivalent
+              </p>
+            </div>
+          </section>
 
-                    <div class="assignment">
-                        <h4>Project 2: E-Commerce Product Catalog</h4>
-                        <p>Build a dynamic product catalog with search, filtering, and shopping cart functionality using JavaScript and external APIs.</p>
-                        <span class="due-date">Due: November 12, 2024</span>
-                    </div>
+          <section id="topics">
+            <h2>Course Topics</h2>
+            <ul class="topics-list">
+              <li>
+                <strong>Week 1 : Introduction of Web Technology</strong>
+              </li>
+              <li>
+                <strong>Week 2 : HTML5 and CSS</strong>
+              </li>
+              <li>
+                <strong>Week 3 : HTML5</strong>
+              </li>
+              <li>
+                <strong>Week 4 : JavaScript, JSON, jQuery</strong>
+              </li>
+              <li>
+                <strong>Week 5 : Term Project Proposal Presentation</strong>
+              </li>
+              <li>
+                <strong>Week 6 : jQuery, AJAX</strong>
+              </li>
+              <li>
+                <strong
+                  >Week 7 : Web servers(Apache), Backend. Database Processing:
+                  MySQL</strong
+                >
+              </li>
+              <li>
+                <strong>Week 8 : PHP</strong>
+              </li>
+              <li>
+                <strong>Week 9 : PHP sessions</strong>
+              </li>
+              <li>
+                <strong>Week 10 : Node.js</strong>
+              </li>
+              <li>
+                <strong>Week 11 : React</strong>
+              </li>
+              <li>
+                <strong>Week 12 : HTTPS, Web security</strong>
+              </li>
+              <li>
+                <strong>Week 13 : Thanksgiving recess (no class) </strong>
+              </li>
+              <li>
+                <strong
+                  >Week 14 : Term Project Demonstration and Presntation</strong
+                >
+              </li>
+            </ul>
+          </section>
 
-                    <div class="assignment">
-                        <h4>Project 3: React Web Application</h4>
-                        <p>Develop a full-featured web application using React, including state management, routing, and API integration.</p>
-                        <span class="due-date">Due: December 10, 2024</span>
-                    </div>
+          <section id="assignments">
+            <h2>Assignments & Projects</h2>
 
-                    <div class="assignment">
-                        <h4>Final Project: Complete Web Solution</h4>
-                        <p>Design and implement a comprehensive web application addressing a real-world problem, including frontend, backend, and database components.</p>
-                        <span class="due-date">Due: December 20, 2024</span>
-                    </div>
+            <div class="assignment">
+              <h4>Project 1: Personal Portfolio Website</h4>
+              <p>
+                Create a responsive personal portfolio website showcasing your
+                skills and projects. Must include semantic HTML5, advanced CSS
+                layouts, and interactive JavaScript features.
+              </p>
+              <span class="due-date">Due: September 26, 2025</span>
+            </div>
 
-                    <h3>Weekly Homework Assignments</h3>
-                    <p>Weekly coding exercises focusing on specific technologies and concepts covered in lectures. Each assignment builds upon previous knowledge and prepares students for upcoming project milestones.</p>
-                </section>
+            <div class="assignment">
+              <h4>Project 2: E-Commerce Product Catalog</h4>
+              <p>
+                Build a dynamic product catalog with search, filtering, and
+                shopping cart functionality using JavaScript and external APIs.
+              </p>
+              <span class="due-date">Due: November 12, 2025</span>
+            </div>
 
-                <section id="resources">
-                    <h2>Course Resources</h2>
-                    
-                    <h3>Required Textbooks</h3>
-                    <ul class="topics-list">
-                        <li>
-                            <strong>"HTML and CSS: Design and Build Websites" by Jon Duckett</strong>
-                            Comprehensive guide to modern HTML5 and CSS3 techniques
-                        </li>
-                        <li>
-                            <strong>"JavaScript: The Definitive Guide" by David Flanagan</strong>
-                            Complete reference for JavaScript programming and web APIs
-                        </li>
-                    </ul>
+            <div class="assignment">
+              <h4>Project 3: React Web Application</h4>
+              <p>
+                Develop a full-featured web application using React, including
+                state management, routing, and API integration.
+              </p>
+              <span class="due-date">Due: December 10, 2025</span>
+            </div>
 
-                    <h3>Recommended Online Resources</h3>
-                    <ul class="topics-list">
-                        <li>
-                            <strong>MDN Web Docs</strong>
-                            Authoritative documentation for web technologies and standards
-                        </li>
-                        <li>
-                            <strong>Can I Use</strong>
-                            Browser compatibility tables for web technologies
-                        </li>
-                        <li>
-                            <strong>CSS-Tricks</strong>
-                            Articles, guides, and tutorials for modern CSS techniques
-                        </li>
-                    </ul>
-                </section>
-            </main>
+            <div class="assignment">
+              <h4>Final Project: Complete Web Solution</h4>
+              <p>
+                Design and implement a comprehensive web application addressing
+                a real-world problem, including frontend, backend, and database
+                components.
+              </p>
+              <span class="due-date">Due: December 20, 2025</span>
+            </div>
 
-            <aside class="sidebar">
-                <a href="index.html" class="home-link">
-                    🏠 Back to Home Page
-                </a>
+            <h3>Weekly Homework Assignments</h3>
+            <p>
+              Weekly coding exercises focusing on specific technologies and
+              concepts covered in lectures. Each assignment builds upon previous
+              knowledge and prepares students for upcoming project milestones.
+            </p>
+          </section>
 
-                <h3>Course Information</h3>
-                <ul>
-                    <li><strong>Instructor:</strong> Dr. Jinhua Guo </li>
-                    <li><strong>Credits:</strong> 3 Credit Hours</li>
-                    <li><strong>Schedule:</strong> Tuesday 3:00PM - 5:45 PM</li>
-                    <li><strong>Location:</strong> PEC 1430/1440 </li>
-                    <li><strong>Office Hours:</strong> Tuesday 1:00PM - 3:00 PM / Friday 5:00PM - 6:00PM</li>
-                </ul>
+          <section id="resources">
+            <h2>Course Resources</h2>
 
-                <h3>Important Dates</h3>
-                <ul>
-                    <li>Midterm Exam: October 25, 2024</li>
-                    <li>Project 2 Due: November 12, 2024</li>
-                    <li>Final Exam: December 15, 2024</li>
-                    <li>Final Project Due: December 20, 2024</li>
-                </ul>
+            <h3>Required Textbooks</h3>
+            <ul class="topics-list">
+              <li>
+                <strong>
+                  "Murach’s HTML5 and CSS3" by Zak Ruvalcaba and Anne Boehm
+                </strong>
+                Comprehensive guide to modern HTML5 and CSS3 techniques
+              </li>
+              <li>
+                <strong
+                  >"Murach’s Modern JavaScript: Beginner to Pro" by Mary
+                  Delamater, 2024</strong
+                >
+                Complete reference for JavaScript programming and web APIs
+              </li>
+              <li>
+                <strong
+                  >"Murach’s PHP and MySQL" by Joel Murach and Ray
+                  Harris.</strong
+                >
+              </li>
+            </ul>
+          </section>
 
-                <h3>Useful Links</h3>
-                <ul>
-                    <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
-                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
-                    <li><a href="https://codepen.io/" target="_blank">CodePen</a></li>
-                    <li><a href="https://github.com/" target="_blank">GitHub</a></li>
-                    <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
-                </ul>
+          <section id="policies">
+            <h2>Policies</h2>
+            <h3>Video and Audio Recording Policies</h3>
+            <ul class="topics-list">
+              <li>
+                <strong>Course lectures may be audio/video recorded</strong>
+                Course lectures may be audio/video recorded and made available
+                to other students in this course. As part of your participation
+                in this course, you may be recorded. If you do not wish to be
+                recorded, please contact the instructor in the first week of
+                class to discuss alternative arrangements.
+              </li>
+              <li>
+                <strong
+                  >Students may not record or distribute any class
+                  activity</strong
+                >
+                Students may not record or distribute any class activity without
+                written permission from the instructor, except as necessary as
+                part of approved accommodations for students with disabilities.
+                Any approved recordings may only be used for the student’s own
+                private use.
+              </li>
+            </ul>
 
-                <h3>Development Tools</h3>
-                <ul>
-                    <li>Visual Studio Code</li>
-                    <li>Chrome DevTools</li>
-                    <li>Git & GitHub</li>
-                    <li>Node.js & npm</li>
-                    <li>Figma (UI Design)</li>
-                </ul>
+            <h3>Course Policies</h3>
+            <ul class="topics-list">
+              <li>
+                <strong> Due Dates: </strong>
+                All assignments are due at 11:59 pm on the date specified.
+                Programming assignments and lab reports may be turned in up to
+                one week later, at a penalty of 3% per day. No late homework
+                will be accepted. Exceptions to these rules will be made only
+                under exceptional circumstances, and then only with an
+                appropriate written excuse.
+              </li>
+              <li>
+                <strong> Grade disputes and corrections: </strong>
+                If you are dissatisfied with a grade you receive, you need to
+                contact me within one week of the date that I first attempted to
+                return the exam or assignment results to you.
+              </li>
+              <li>
+                <strong>Plagiarism: </strong>
+                Although students are encouraged to help their classmates,
+                students sharing code are guilty of plagiarism. If programs are
+                considered too similar, the students will be asked to explain.
+                In all cases of cheating, students who supply code or take it
+                will both be penalized. The assignments in this class are for
+                student use only. You are not allowed to post any assignments on
+                the Internet or share them with other students. Students who
+                turn in questionable assignments or exams are subject to defend
+                them orally to the professor without warning. The minimum
+                penalty for all students involved in cheating is failure on the
+                assignment.
+              </li>
+            </ul>
+          </section>
+        </main>
 
-                <h3>Grading Breakdown</h3>
-                <ul>
-                    <li>Mini Projects: 45%</li>
-                    <li>term Project: 45%</li>
-                    <li>Class Participation/Attendance: 10%</li>
-                </ul>
-            </aside>
-        </div>
+        <aside class="sidebar">
+          <a href="index.html" class="home-link"> 🏠 Back to Home Page </a>
 
-        <footer>
-            <p>&copy; 2025 CIS 525 Web Technology | <a href="mailto:tejasv@umich.edu" style="color: white;">Contact</a></p>
-        </footer>
+          <h3>Course Information</h3>
+          <ul>
+            <li><strong>Instructor:</strong> Dr. Jinhua Guo</li>
+            <li><strong>Credits:</strong> 3 Credit Hours</li>
+            <li><strong>Schedule:</strong> Tuesday 3:00PM - 5:45 PM</li>
+            <li><strong>Location:</strong> PEC 1430/1440</li>
+            <li>
+              <strong>Office Hours:</strong> Tuesday 1:00PM - 3:00 PM / Friday
+              5:00PM - 6:00PM
+            </li>
+          </ul>
+
+          <h3>Important Dates</h3>
+          <ul>
+            <li>Project 1 Due: 26th September, 2025</li>
+            <li>Project 2 Due: 12th November, 2025</li>
+            <li>Project 3 Due: 10th December, 2025</li>
+            <li>Final Project Due: 20th December, 2025</li>
+          </ul>
+
+          <h3>Useful Links</h3>
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/" target="_blank"
+                >MDN Web Docs</a
+              >
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+            </li>
+            <li><a href="https://codepen.io/" target="_blank">CodePen</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            <li>
+              <a href="https://stackoverflow.com/" target="_blank"
+                >Stack Overflow</a
+              >
+            </li>
+          </ul>
+
+          <h3>Development Tools</h3>
+          <ul>
+            <li>Visual Studio Code</li>
+            <li>Chrome DevTools</li>
+            <li>Git & GitHub</li>
+            <li>Node.js & npm</li>
+            <li>Figma (UI Design)</li>
+          </ul>
+
+          <h3>Grading Breakdown</h3>
+          <ul>
+            <li>Mini Projects: 45%</li>
+            <li>Term Project: 45%</li>
+            <li>Class Participation/Attendance: 10%</li>
+          </ul>
+        </aside>
+      </div>
+
+      <footer>
+        <p>
+          &copy; 2025 CIS 525 Web Technology |
+          <a href="mailto:jinhua@umich.edu" style="color: white">Contact:</a>
+          jinhua@umich.edu
+        </p>
+      </footer>
     </div>
-</body>
-</html>  
+  </body>
+</html>

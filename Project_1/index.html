@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tejas Vaity - Personal Home Page</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <div class="container">
@@ -13,32 +13,32 @@
         <p>Master's student in Computer & Information Science</p>
       </header>
 
-      <nav>
+      <nav class="navbar">
         <input type="checkbox" id="checkbox-toggle" />
         <label for="checkbox-toggle" class="menu-btn"></label>
-        <ul class="navbar-main">
+        <ul class="menu">
           <li>
             <a class="current">Home</a>
           </li>
           <li>
-            <a href="#about">About<small>&#9660;</small></a>
-            <ul class="nav-sub">
+            <a href="#about">About<small class="arrow"></small></a>
+            <ul class="submenu">
               <li><a href="#bio">Biography</a></li>
               <li><a href="#interests">Interests</a></li>
               <li><a href="#hobbies">Hobbies</a></li>
             </ul>
           </li>
           <li>
-            <a href="#academics">Academics<small>&#9660;</small></a>
-            <ul class="nav-sub">
+            <a href="#academics">Academics<small class="arrow"></small></a>
+            <ul class="submenu">
               <li><a href="cis525.html">CIS 525</a></li>
               <li><a href="#courses">Current Courses</a></li>
               <li><a href="#projects">Projects</a></li>
             </ul>
           </li>
           <li>
-            <a href="#contact">Contact<small>&#9660;</small></a>
-            <ul class="nav-sub">
+            <a href="#contact">Contact<small class="arrow"></small></a>
+            <ul class="submenu">
               <li><a href="#email">Email</a></li>
               <li><a href="#social">Social Media</a></li>
             </ul>
@@ -105,15 +105,13 @@
             <h3>Favorite Books</h3>
             <ul>
               <li>
-                Clean Code by Robert C. Martin - Essential reading for any
-                programmer
+                The Lord of the Rings by J. R. R. Tolkien
               </li>
               <li>
-                The Pragmatic Programmer - Practical advice for software
-                development
+                Half Girlfriend by Chetan Bhagat
               </li>
               <li>
-                Dune by Frank Herbert - Classic science fiction masterpiece
+                In Search of Lost Time by Marcel Proust
               </li>
             </ul>
 
@@ -129,7 +127,7 @@
             <h2>Current Projects</h2>
             <p>
               I am currently working as Research Assistant in University of
-              Michigan-Dearborn
+              Michigan-Dearborn on CPS based systems for Docker Optimization.
             </p>
           </section>
         </main>
