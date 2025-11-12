@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!preg_match('/^\d{8}$/', $umid) || $password === '') {
         $_SESSION['login_errors'] = 'Invalid UMID or password.';
-        header('Location: login.php');
+        header('Location: index.php');
         exit;
     }
 
@@ -16,14 +16,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $student = $stmt->fetch();
     if (!$student || !password_verify($password, $student['password_hash'])) {
         $_SESSION['login_errors'] = 'Authentication failed.';
-        header('Location: login.php');
+        header('Location: index.php');
         exit;
     }
     $_SESSION['auth_umid'] = $umid;
 }
 
 if (empty($_SESSION['auth_umid'])) {
-    header('Location: login.php');
+    header('Location: index.php');
     exit;
 }
 
@@ -35,7 +35,7 @@ $stmt->execute([$umid]);
 $student = $stmt->fetch();
 if (!$student) {
     session_destroy();
-    header('Location: login.php');
+    header('Location: index.php');
     exit;
 }
 

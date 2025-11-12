@@ -43,7 +43,7 @@ if (!empty($errors)) {
 $stmt = $pdo->prepare("SELECT umid FROM students WHERE umid = ?");
 $stmt->execute([$umid]);
 if ($stmt->fetch()) {
-    $errors['umid'] = 'UMID already registered. Please <a href="login.php">login</a> to manage your registration.';
+    $errors['umid'] = 'UMID already registered. Please <a href="index.php">login</a> to manage your registration.';
     bad(['errors'=>$errors,'old'=>$old]);
 }
 

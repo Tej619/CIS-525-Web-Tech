@@ -102,7 +102,7 @@ unset($_SESSION['reg_errors'], $_SESSION['reg_old']);
           <button type="submit">Register</button>
         </div>
         <div class="col small center">
-          Already registered? <a href="login.php">Login to manage</a><br>
+          Already registered? <a href="index.php">Login to manage</a><br>
           View <a href="students.php">All Registered Students</a>
         </div>
       </div>
